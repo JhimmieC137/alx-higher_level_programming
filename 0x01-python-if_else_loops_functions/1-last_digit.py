@@ -5,7 +5,7 @@ rem = number
 sign = 1
 if rem < 0:
     sign = sign * -1
-    rem = rem *sign
+    rem = rem * sign
 rem = (rem % 10) * sign
 if rem > 5:
     print(f'Last digit of {number} is {rem} and is greater than 5')
