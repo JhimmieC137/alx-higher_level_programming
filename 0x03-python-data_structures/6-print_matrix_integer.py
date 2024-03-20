@@ -2,5 +2,7 @@
 def print_matrix_integer(matrix=[[]]):
     for i in matrix:
         for x in i:
-            print(x, end=" ")
-        print()
+            if i.index(x) == (len(i) - 1):
+                print(x)
+            else:
+                print(x, end=" ")
