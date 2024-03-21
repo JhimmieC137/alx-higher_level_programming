@@ -32,12 +32,8 @@ def roman_to_int(roman_string):
                     x += 1
                 elif (x + 1) <= (s_len - 1) and roman_string[x + 1] == "V":
                     result += 4
-                    x += 1
+                    x += 1 
                 else:
                     result += num_dict[roman_string[x]]
             else:
                 result += num_dict[roman_string[x]]
-            x += 1
-        return result
-    else:
-        return 0
