@@ -6,9 +6,9 @@ def lookup(obj):
     """The lookup function takes in a class or class
         object and return a list of contained methods
 
-    Args: 
+    Args
         <class> obj
-    Returns:
-        <list> 
+    Returns
+        <list>
     """
     return list(dir(obj))
