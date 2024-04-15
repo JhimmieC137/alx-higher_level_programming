@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-import doctest
 
 """This python document returns a list"""
 
@@ -14,5 +13,3 @@ class MyList(list):
         print(sim)
 
 
-if __name__ == "__main__":
-    doctest.testfile("tests/1-my_list.txt")
