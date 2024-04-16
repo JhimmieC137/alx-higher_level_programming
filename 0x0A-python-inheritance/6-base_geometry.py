@@ -1,10 +1,8 @@
 #!/usr/bin/python3
-BaseGeometry = __import__("5-base_geometry").BaseGeometry
-
 """This script contains class with methods"""
 
 
-class BaseGeometry(BaseGeometry):
+class BaseGeometry():
     """BaseGeometry
         This is a subclass of the BaseGeometry class
     """
