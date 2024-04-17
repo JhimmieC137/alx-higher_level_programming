@@ -16,7 +16,7 @@ class Rectangle(BaseGeometry):
     def width(self):
         """Check if width is a positive integer"""
         if width < 0:
-            width *= -1
+            raise ValueError("width must be a positive integer")
         super().integer_validator("width", width)
         return self.__width
 
@@ -24,6 +24,6 @@ class Rectangle(BaseGeometry):
     def height(self):
         """Check if height is a positive integer"""
         if height < 0:
-            height *= -1
+            raise ValueError("height must be a positive integer")
         super().integer_validator("height", height)
         return self.__height
