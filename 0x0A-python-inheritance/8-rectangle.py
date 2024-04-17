@@ -9,21 +9,11 @@ class Rectangle(BaseGeometry):
     """
     def __init__(self, width, height):
         """Initializing the class so we can define attributes as private"""
-        self.__width = width
-        self.__height = height
-
-    @property
-    def width(self):
-        """Check if width is a positive integer"""
         if width < 0:
             raise ValueError("width must be a positive integer")
-        super().integer_validator("width", width)
-        return self.__width
-
-    @property
-    def height(self):
-        """Check if height is a positive integer"""
         if height < 0:
             raise ValueError("height must be a positive integer")
         super().integer_validator("height", height)
-        return self.__height
+        super().integer_validator("width", width)
+        self.__width = width
+        self.__height = height
