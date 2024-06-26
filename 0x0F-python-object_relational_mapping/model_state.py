@@ -1,13 +1,16 @@
 #!/usr/bin/python3
+
+import sys
+from sqlalchemy import (MetaData, Table,
+                        create_engine, Column, Integer, String)
+from sqlalchemy.orm import sessionmaker, declarative_base
+
+
 """
     This script creates the model
     state and binds it to the database
     engine
 """
-import sys
-from sqlalchemy import (MetaData, Table,
-                        create_engine, Column, Integer, String)
-from sqlalchemy.orm import sessionmaker, declarative_base
 
 engine = create_engine(
     'mysql+mysqldb://{}:{}@localhost/{}'
