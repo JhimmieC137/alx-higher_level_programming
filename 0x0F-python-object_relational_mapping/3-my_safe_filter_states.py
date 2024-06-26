@@ -16,10 +16,11 @@ if __name__ == "__main__":
         passwd=sys.argv[2],
         db=sys.argv[3]
     )
+    query_object = str(sys.argv[4])
     cur = db.cursor()
     cur.execute(
         "SELECT * FROM states WHERE name = '{}' ORDER BY ID ASC"
-        .format(str(sys.argv[4]))
+        .format(query_object)
     )
     for name in cur.fetchall():
         print(name)
