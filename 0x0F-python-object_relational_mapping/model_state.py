@@ -16,7 +16,8 @@ if __name__ == "__main__":
                 sys.argv[3],
             )
     )
-
+    Session = sessionmaker(bind=engine)
+    session = Session()
     Base = declarative_base()
     Base.metadata.create_all(engine)
 
