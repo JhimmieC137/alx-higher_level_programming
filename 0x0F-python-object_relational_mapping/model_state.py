@@ -14,6 +14,7 @@ from sqlalchemy.orm import sessionmaker, declarative_base
 
 Base = declarative_base()
 
+
 class State(Base):
     """
         The state model with attributes
