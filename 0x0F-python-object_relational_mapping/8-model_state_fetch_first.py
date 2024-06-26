@@ -24,4 +24,7 @@ if __name__ == "__main__":
     db = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 
     state = db().query(State).first()
-    print("{}: {}".format(1, state.name))
+    if not state:
+        print("Nothing")
+    else:
+        print("{}: {}".format(1, state.name))
