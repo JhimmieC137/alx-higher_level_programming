@@ -1,7 +1,8 @@
 #!/usr/bin/python3
 """
     This script creates the model
-    State
+    state and binds it to the database
+    engine
 """
 import sys
 from sqlalchemy import (MetaData, Table,
