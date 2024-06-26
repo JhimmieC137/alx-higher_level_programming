@@ -11,7 +11,7 @@ from sqlalchemy import (MetaData, Table, ForeignKey,
                         create_engine, Column, Integer, String)
 from sqlalchemy.orm import relationship, sessionmaker, declarative_base
 
-from model_state import Base
+from relationship_state import Base
 
 
 class City(Base):
@@ -31,11 +31,11 @@ class City(Base):
         )
     state_id = Column(
             Integer,
-            ForeignKey("states.id"),
+            ForeignKey("states.id", ondelete="CASCADE"),
             nullable=True
             )
     state = relationship(
             "State",
-            back_populates="cites",
+            back_populates="cities",
             uselist=False
             )
