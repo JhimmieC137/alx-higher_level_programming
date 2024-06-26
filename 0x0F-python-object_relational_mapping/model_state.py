@@ -1,4 +1,9 @@
 #!/usr/bin/python3
+"""
+    This script creates the model
+    State
+"""
+
 if __name__ == "__main__":
     from sqlalchemy import create_engine
     from sqlalchemy.orm import declarative_base
@@ -16,6 +21,9 @@ if __name__ == "__main__":
     Base.metadata.create_all(engine)
 
     class State(Base):
+        """
+            The state model with attributes
+        """
         __tablename__ = "states"
         id = Column(
             Integer,
