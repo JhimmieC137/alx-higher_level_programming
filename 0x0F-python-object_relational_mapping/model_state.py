@@ -26,6 +26,12 @@ Base = declarative_base()
 Base.metadata.create_all(engine)
 metadata = MetaData()
 
+"""
+    This script creates the model
+    state and binds it to the database
+    engine
+"""
+
 State = Table(
             "states",
             metadata,
