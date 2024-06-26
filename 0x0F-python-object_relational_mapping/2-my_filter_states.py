@@ -18,7 +18,7 @@ if __name__ == "__main__":
     )
     cur = db.cursor()
     cur.execute(
-        "SELECT * FROM states WHERE name LIKE '{}' ORDER BY ID ASC"
+        "SELECT * FROM states WHERE name LIKE BINARY '{}' ORDER BY ID ASC"
         .format(str(sys.argv[4]))
     )
     for name in cur.fetchall():
