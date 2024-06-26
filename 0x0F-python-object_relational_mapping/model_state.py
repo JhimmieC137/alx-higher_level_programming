@@ -9,7 +9,7 @@
 import sys
 from sqlalchemy import (MetaData, Table,
                         create_engine, Column, Integer, String)
-from sqlalchemy.orm import sessionmaker, declarative_base
+from sqlalchemy.orm import relationship, declarative_base
 
 
 Base = declarative_base()
@@ -29,4 +29,9 @@ class State(Base):
     name = Column(
         String(128),
         nullable=False
+        )
+    city = relationship(
+        "City",
+        back_populates="state",
+        uselist=False
         )
