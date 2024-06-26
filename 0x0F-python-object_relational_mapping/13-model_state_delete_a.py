@@ -26,7 +26,7 @@ if __name__ == "__main__":
     db = session()
 
     list_of_states = db.query(State)\
-        .filter(State.name.like("%a%"))\
+        .filter(State.name.ilike("%a%"))\
         .order_by(State.id.asc())\
         .all()
     for state in list_of_states:
